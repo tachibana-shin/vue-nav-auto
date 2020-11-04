@@ -38,18 +38,34 @@ use(VueNavAuto)
 ```
 
 ``` vue.js
-<vue-nav-auto type="top">
+<vue-nav-auto type="top" class="header">
    <!-- Content -->
 </vue-nav-auto>
+
+<style lang="scss" scoped>
+   .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1024;
+   }
+</style>
 ```
 
 ### Private
 
 ``` vue.js
-<vue-nav-auto type="top">
+<vue-nav-auto type="top" class="header*>
    <!-- Content -->
 </vue-nav-auto>
-
+<style lang="scss" scoped>
+   .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1024;
+   }
+</style> 
 <script>
    import { VueNavAuto } from "vue-nav-auto"
    
