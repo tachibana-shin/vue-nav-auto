@@ -1,6 +1,6 @@
 {
    "name": "vue-nav-auto",
-   "version": "0.0.1",
+   "version": "0.0.1-b1",
    "description": "Allows your navbar to be automatically hidden, just like Android. Support for Chrome, Firefox, Safari, Opera, EDGE.",
    "main": "src/index.js",
    "author": "Nguyen Thanh",
