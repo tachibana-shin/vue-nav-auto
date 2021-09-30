@@ -1,52 +1,49 @@
 {
-   "name": "vue-nav-auto",
-   "version": "0.0.1-b1",
-   "description": "Allows your navbar to be automatically hidden, just like Android. Support for Chrome, Firefox, Safari, Opera, EDGE.",
-   "main": "src/index.js",
-   "author": "Nguyen Thanh",
-   "license": "MIT",
-   "repository": {
-      "type": "git",
-      "url": "git+ssh://git@github.com/nguyenthanh1995/vue-nav-auto.git"
-   },
-   "keywords": [
-      "scroll",
-      "vue-nav-auto",
-      "vue",
-      "navbar"
-   ],
-   "bugs": {
-      "url": "https://github.com/nguyenthanh1995/vue-nav-auto/issues"
-   },
-   "homepage": "https://github.com/nguyenthanh1995/vue-nav-auto#readme",
-   "scripts": {
-      "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress --hide-modules",
-      "build": "node_modules/webpack/bin/webpack.js --mode production --progress --hide-module"
-   },
-   "devDependencies": {
-      "@babel/core": "^7.0.0-rc.1",
-      "@babel/preset-env": "^7.0.0-rc.1",
-      "@babel/register": "^7.0.0-rc.1",
-      "babel": "^6.23.0",
-      "babel-loader": "^8.1.0",
-      "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-      "uglifyjs-webpack-plugin": "^2.2.0",
-      "webpack": "^4.44.2",
-      "webpack-cli": "^3.3.12"
-   },
-   "babel": {
-      "presets": [
-         [
-            "@babel/preset-env",
-            {
-               "targets": {
-                  "node": "current"
-               }
-            }
-         ]
-      ],
-      "plugins": [
-         "transform-es2015-modules-commonjs"
-      ]
-   }
+  "name": "vue-nav-auto",
+  "version": "0.0.2",
+  "description": "Allows your navbar to be automatically hidden, just like Android. Support for Chrome, Firefox, Safari, Opera, EDGE.",
+  "main": "dist/vue-nav-auto.min.js",
+  "module": "dist/vue-nav-auto.esm.js",
+  "unpkg": "dist/vue-nav-auto.esm.js",
+  "types": "./types/index.d.ts",
+  "author": "Nguyen Thanh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tachibana-shin/vue-nav-auto.git"
+  },
+  "keywords": [
+    "scroll",
+    "vue-nav-auto",
+    "vue",
+    "navbar"
+  ],
+  "bugs": {
+    "url": "https://github.com/tachibana-shin/vue-nav-auto/issues"
+  },
+  "homepage": "https://github.com/tachibana-shin/vue-nav-auto#readme",
+  "scripts": {
+    "build": "rollup -c rollup.config.ts",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "cspell": "^4.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-functional": "^3.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.4.2",
+    "prettier": "^2.1.1",
+    "rollup": "^2.45.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4",
+    "vue": "^3.2.19"
+  }
 }
