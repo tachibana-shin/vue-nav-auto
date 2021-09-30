@@ -1,46 +1,50 @@
 # vue-nav-auto
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nguyenthanh1995/vue-i18n-filters/blob/master/LICENSE)  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#)
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tachibana-shin/vue-i18n-filters/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#)
 
 **Allows your navbar to be automatically hidden, just like Android.**
 
-
 ## Table of Contents
+
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 
 ## Installation
 
-``` bash
+```bash
 npm install vue-nav-auto
 ```
 
-``` bash
+```bash
 yarn add vue-nav-auto
 ```
 
 or if you prefer CDN
 
-``` html
-<script type="text/javascript" src="https://unpkg.com/vue-nav-auto@latest/dist/vue-nav-auto.js"></script>
+```html
+<script
+  type="text/javascript"
+  src="https://unpkg.com/vue-nav-auto@latest/dist/vue-nav-auto.umd.js"
+></script>
 ```
 
 ## Usage
 
 ### Global
 
-``` JavaScript
-import { use } from "vue"
+```JavaScript
 import VueNavAuto from "vue-nav-auto"
 
-use(VueNavAuto)
-
+app.use(VueNavAuto)
 ```
 
-``` vue.js
-<vue-nav-auto type="top" class="header">
-   <!-- Content -->
-</vue-nav-auto>
+```vue.js
+<template>
+   <vue-nav-auto type="top" class="header">
+      <!-- Content -->
+   </vue-nav-auto>
+</template>
 
 <style lang="scss" scoped>
    .header {
@@ -54,10 +58,17 @@ use(VueNavAuto)
 
 ### Private
 
-``` vue.js
-<vue-nav-auto type="top" class="header*>
-   <!-- Content -->
-</vue-nav-auto>
+```vue.js
+<template>
+   <vue-nav-auto type="top" class="header*>
+      <!-- Content -->
+   </vue-nav-auto>
+</template>
+
+<script lang="ts" setup>
+import { VueNavAuto } from "vue-nav-auto"
+</script>
+
 <style lang="scss" scoped>
    .header {
       position: fixed;
@@ -65,26 +76,19 @@ use(VueNavAuto)
       top: 0;
       z-index: 1024;
    }
-</style> 
-<script>
-   import { VueNavAuto } from "vue-nav-auto"
-   
-   export default {
-      components: { VueNavAuto }
-   }
-</script>
+</style>
 ```
 
 ### Configuration
 
-| Property | Type | Default | Description |
-|:-|:-|:-|:-|
-| tag | String | "div" | A tag name for component |
-| type | String | "top" | will leave the nav bar at the "top" or "bottom" |
-| offset-hidden | Number | 0 | this determines how much away the screen after hiding the navbar (px) |
-| tracker | Any | window | This will be the object tracking navbar's scroll events like document, window ... |
-| duration | String | "0.01s" | This is the effect smoothing time.  It is really not necessary but you should leave it to 10 seconds (0.01s). |
-| multipler | Number | 1 | This is a very special option.  it will amplify, shrink or even reverse whether the navbar will be hidden when scrolling up or down. See the example to understand better. |
+| Property      | Type   | Default | Description                                                                                                                                                               |
+| :------------ | :----- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| tag           | String | "div"   | A tag name for component                                                                                                                                                  |
+| type          | String | "top"   | will leave the nav bar at the "top" or "bottom"                                                                                                                           |
+| offset-hidden | Number | 0       | this determines how much away the screen after hiding the navbar (px)                                                                                                     |
+| tracker       | Any    | window  | This will be the object tracking navbar's scroll events like document, window ...                                                                                         |
+| duration      | String | "0.01s" | This is the effect smoothing time. It is really not necessary but you should leave it to 10 seconds (0.01s).                                                              |
+| slipCoff     | Number | 1       | This is a very special option. it will amplify, shrink or even reverse whether the navbar will be hidden when scrolling up or down. See the example to understand better. |
 
 ## License
 
